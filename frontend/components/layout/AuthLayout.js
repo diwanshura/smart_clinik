@@ -73,7 +73,7 @@ export function AuthLayout({ title, subtitle, children, footer, showVisualPanel 
                 <div className="flex h-6 w-6 items-center justify-center rounded-lg bg-indigo-500/20 text-indigo-300">
                   <Zap className="h-3.5 w-3.5" />
                 </div>
-                Real-time SMS & web push queue notifications
+                Real-time web push queue notifications
               </div>
             </div>
           </div>

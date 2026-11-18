@@ -113,7 +113,7 @@ router.post(
         { path: 'doctorId', populate: { path: 'userId', select: 'name' } },
       ]);
 
-      // Send push notification & SMS confirmation (async, don't block response)
+      // Send push notification confirmation (async, don't block response)
       const fullUser = await User.findById(req.user._id);
       sendBookingConfirmation(fullUser, appointment).catch(err => {
         console.error('Notification error (non-blocking):', err.message);

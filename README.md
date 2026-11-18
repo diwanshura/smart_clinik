@@ -11,7 +11,7 @@ Team:  Diwanshu
 | Frontend | Next.js 15 (App Router), React 19, JavaScript ES6+, Tailwind CSS 4, Lucide React |
 | Backend | Node.js, Express.js, MongoDB + Mongoose, JWT + bcrypt, Socket.io |
 | Real-time | Socket.io + socket.io-client (polling fallback) |
-| Notifications | Twilio (SMS), Firebase Cloud Messaging (push) |
+| Notifications | Firebase Cloud Messaging (push) |
 | Deployment | Vercel (frontend) · Render (backend) · MongoDB Atlas |
 
 ## Project structure

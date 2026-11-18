@@ -91,9 +91,8 @@ app.get('/health', (req, res) => {
 
 // System Status Check (Temporary for verification)
 app.get('/api/status', (req, res) => {
-  const { twilioClient, firebaseAdmin } = require('./utils/notifications');
+  const { firebaseAdmin } = require('./utils/notifications');
   res.json({
-    twilio: !!twilioClient ? '✅ Connected' : '❌ Not Configured',
     firebase: !!firebaseAdmin ? '✅ Connected' : '❌ Not Configured',
     env: process.env.NODE_ENV
   });

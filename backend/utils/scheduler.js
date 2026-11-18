@@ -1,7 +1,7 @@
 const cron = require('node-cron');
 const Appointment = require('../models/Appointment');
 const User = require('../models/User');
-const { sendSMSReminder, sendPushNotification } = require('./notifications');
+const { sendPushNotification } = require('./notifications');
 
 /**
  * Initialize all cron jobs for the clinic system
@@ -50,16 +50,6 @@ async function sendUpcomingReminders(io) {
 
     for (const appt of upcoming) {
       const patient = appt.userId;
-
-      // Send SMS reminder
-      if (patient.phone) {
-        await sendSMSReminder(patient.phone, {
-          patientName: patient.name,
-          slotTime: appt.slotTime,
-          tokenNumber: appt.tokenNumber,
-          date: appt.date,
-        });
-      }
 
       // Send Push reminder to all devices
       if (patient.fcmTokens && patient.fcmTokens.length > 0) {

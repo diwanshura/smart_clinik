@@ -42,7 +42,7 @@ const FEATURES = [
   {
     icon: BellRing,
     title: 'Smart Reminders',
-    text: 'Automated SMS and web push notifications trigger right before your turn arrives so you never miss a visit.',
+    text: 'Automated web push notifications trigger right before your turn arrives so you never miss a visit.',
     gradient: 'from-amber-500 to-orange-500',
   },
   {
@@ -154,7 +154,7 @@ export default function HomePage() {
                   </div>
                   <div className="flex items-center gap-1.5">
                     <CheckCircle2 className="h-4 w-4 text-emerald-400" />
-                    <span>SMS &amp; Push reminders</span>
+                    <span>Push reminders</span>
                   </div>
                 </div>
               </div>

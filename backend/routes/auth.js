@@ -79,7 +79,7 @@ router.post(
 
       const token = generateToken(user._id);
 
-      // Send welcome notification (Push + SMS)
+      // Send welcome push notification
       sendWelcomeNotification(user).catch(err => console.error('Welcome notification error:', err.message));
 
       res.status(201).json({
@@ -134,7 +134,7 @@ router.post(
 
       const token = generateToken(user._id);
 
-      // Send login alert (Push + SMS)
+      // Send login push notification
       sendLoginNotification(user).catch(err => console.error('Login notification error:', err.message));
 
       res.json({
